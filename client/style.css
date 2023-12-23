@@ -1,0 +1,90 @@
+body{
+    background-color: aqua;
+    color: black;
+    font-family: sans-serif;
+}
+
+.form-container {
+    padding: 10px;
+    margin-bottom: 50px;
+    background: #929191;
+    max-width: 505px;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    
+}
+
+input, textarea {
+    border: solid;
+    border-color: black;
+    border-width: 2px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 12px;
+    border-radius: 4px;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+
+}
+
+#messageContainer li {
+    margin-bottom: 20px;
+    margin-left: -40px;
+    padding: 20px;
+    background: #929191;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 485px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+/* Add this in style.css */
+
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    width: 10px;
+    padding: 0px;
+    margin: 0px;
+    /* Add other styles as needed */
+}
+
+.delete-btn .fas {
+    color: #333; /* Or any color you prefer */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* 1-2-1 ratio */
+    gap: 10px; /* Adjust the gap between columns as needed */
+    /* Other styling as needed */
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+    }
+}

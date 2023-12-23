@@ -7,7 +7,7 @@ form.addEventListener("submit", async function (event) {
     const formValues = Object.fromEntries(formData);
     console.log(formValues);
     // send the message to the API
-    const response = await fetch("http://localhost:8080/guestbook", {
+    const response = await fetch("https://efarkuhweek4.onrender.com/guestbook", {
         method: "POST",
         headers:{
         "Content-Type": "application/json",
@@ -29,7 +29,7 @@ async function getMessages() {
     messageContainer.innerHTML = '';
     
     // get messages from db with API
-    const response = await fetch("http://localhost:8080/guestbook");
+    const response = await fetch("https://efarkuhweek4.onrender.com/guestbook");
     const messages = await response.json();
     
     // Update message count
@@ -73,7 +73,7 @@ async function getMessages() {
 // Add this function in app.js
 
 async function deleteMessage(id) {
-    const response = await fetch(`http://localhost:8080/guestbook/${id}`, {
+    const response = await fetch(`https://efarkuhweek4.onrender.com/guestbook/${id}`, {
         method: "DELETE",
     });
     const json = await response.json();
